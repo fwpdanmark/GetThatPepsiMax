@@ -120,16 +120,12 @@ namespace GetThatPepsiMax
                 pepsCollisonY.Add(i);
             }
 
-            if (pepsCollisonX.Contains(_x))
+            if (pepsCollisonX.Contains(_x)&&pepsCollisonY.Contains(_y))
             {
                 ScoreTick();
                 MakeRandomPos();
             }
-            if (pepsCollisonY.Contains(_y))
-            {
-                ScoreTick();
-                MakeRandomPos();
-            }
+        
             pepsCollisonX.Clear();
             pepsCollisonY.Clear();
         }
